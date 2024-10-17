@@ -1,0 +1,365 @@
+Index: .idea/MyExperiments.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/MyExperiments.iml b/.idea/MyExperiments.iml
+new file mode 100644
+--- /dev/null	(date 1729087804168)
++++ b/.idea/MyExperiments.iml	(date 1729087804168)
+@@ -0,0 +1,10 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="PYTHON_MODULE" version="4">
++  <component name="NewModuleRootManager">
++    <content url="file://$MODULE_DIR$">
++      <excludeFolder url="file://$MODULE_DIR$/.venv" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: forestFires.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/forestFires.py b/forestFires.py
+new file mode 100644
+--- /dev/null	(date 1729123493604)
++++ b/forestFires.py	(date 1729123493604)
+@@ -0,0 +1,110 @@
++from ucimlrepo import fetch_ucirepo
++import pandas as pd
++import numpy as np
++
++################# Forest fires dataset ####################
++#
++# # fetch dataset
++# forest_fires = fetch_ucirepo(id=162)
++#
++# # data (as pandas dataframes)
++# X = forest_fires.data.features
++# y = forest_fires.data.targets
++#
++# # metadata
++# #print(forest_fires.metadata)
++#
++# # variable information
++# #print(forest_fires.variables)
++#
++# #Since X and y are already of type DataFrame we can use them directly to create a separate DataFrame of X and y combined (if thats what you want)
++# df=pd.DataFrame(X)
++# #print (df.head()) #checking to see what the dataframe looks like
++#
++# df['Target']=y
++# print(df.head())
++
++
++############################### Communities and Crime dataset ########################
++""""
++
++# fetch dataset
++communities_and_crime = fetch_ucirepo(id=183)
++
++# data (as pandas dataframes)
++X = communities_and_crime.data.features
++y = communities_and_crime.data.targets
++
++
++# metadata 
++print(communities_and_crime.metadata)
++
++# variable information 
++print(communities_and_crime.variables) 
++
++df=pd.DataFrame(X)
++df['Target']=y
++print (df.head())
++"""
++
++############# WINE dataset #############
++
++# fetch dataset
++# wine_quality = fetch_ucirepo(id=186)
++#
++# # data (as pandas dataframes)
++# X = wine_quality.data.features
++# y = wine_quality.data.targets
++
++
++# # metadata
++# print(wine_quality.metadata)
++#
++# # variable information
++# print(wine_quality.variables)
++
++
++# df=pd.DataFrame(X)
++# df['Target']=y
++# print (df.head())
++
++########################### BREAST CANCER WISCONSIN DATASET ######################
++
++# from ucimlrepo import fetch_ucirepo
++#
++# # fetch dataset
++# breast_cancer_wisconsin_original = fetch_ucirepo(id=15)
++#
++# # data (as pandas dataframes)
++# X = breast_cancer_wisconsin_original.data.features
++# y = breast_cancer_wisconsin_original.data.targets
++#
++# # metadata
++# print(breast_cancer_wisconsin_original.metadata)
++#
++# # variable information
++# print(breast_cancer_wisconsin_original.variables)
++#
++# df=pd.DataFrame(X)
++# df['Target']=y
++# print (df.head())
++
++####################### CREDIT APPROVAL DATASET ########################
++from ucimlrepo import fetch_ucirepo
++
++# fetch dataset
++credit_approval = fetch_ucirepo(id=27)
++
++# data (as pandas dataframes)
++X = credit_approval.data.features
++y = credit_approval.data.targets
++
++# metadata
++print(credit_approval.metadata)
++
++# variable information
++print(credit_approval.variables)
++
++df=pd.DataFrame(X)
++df['Target']=y
++print (df.head())
+Index: .idea/inspectionProfiles/profiles_settings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/inspectionProfiles/profiles_settings.xml b/.idea/inspectionProfiles/profiles_settings.xml
+new file mode 100644
+--- /dev/null	(date 1729087804198)
++++ b/.idea/inspectionProfiles/profiles_settings.xml	(date 1729087804198)
+@@ -0,0 +1,6 @@
++<component name="InspectionProjectProfileManager">
++  <settings>
++    <option name="USE_PROJECT_PROFILE" value="false" />
++    <version value="1.0" />
++  </settings>
++</component>
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(date 1729087804182)
++++ b/.idea/modules.xml	(date 1729087804182)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/MyExperiments.iml" filepath="$PROJECT_DIR$/.idea/MyExperiments.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+new file mode 100644
+--- /dev/null	(date 1729174318605)
++++ b/.idea/workspace.xml	(date 1729174318605)
+@@ -0,0 +1,142 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="AutoImportSettings">
++    <option name="autoReloadType" value="SELECTIVE" />
++  </component>
++  <component name="ChangeListManager">
++    <list default="true" id="2329b667-a730-4d31-b5fd-87ecddf14c6e" name="Changes" comment="includes a recursive function to calculate the factorial of a number. added logic to prevent negative inputs.">
++      <change afterPath="$PROJECT_DIR$/.idea/MyExperiments.iml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/forestFires.py" afterDir="false" />
++    </list>
++    <option name="SHOW_DIALOG" value="false" />
++    <option name="HIGHLIGHT_CONFLICTS" value="true" />
++    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++    <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="Python Script" />
++      </list>
++    </option>
++  </component>
++  <component name="Git.Settings">
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
++  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
++  "lastFilter": {
++    "state": "OPEN",
++    "assignee": "rproy-cmd"
++  }
++}]]></component>
++  <component name="GithubPullRequestsUISettings"><![CDATA[{
++  "selectedUrlAndAccountId": {
++    "url": "https://github.com/rproy-cmd/pythonProblems",
++    "accountId": "c931025f-4941-4940-9239-fbbf053fc3e9"
++  }
++}]]></component>
++  <component name="ProjectColorInfo"><![CDATA[{
++  "associatedIndex": 4
++}]]></component>
++  <component name="ProjectId" id="2nWTNt3SKVAdeXsg0PisWGynRM9" />
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
++  <component name="ProjectViewState">
++    <option name="hideEmptyMiddlePackages" value="true" />
++    <option name="showLibraryContents" value="true" />
++  </component>
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "Python.factorial.executor": "Debug",
++    "Python.forestFires.executor": "Debug",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "git-widget-placeholder": "main",
++    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
++  },
++  "keyToStringList": {
++    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
++      "Python"
++    ]
++  }
++}]]></component>
++  <component name="RunManager">
++    <configuration name="factorial" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
++      <module name="MyExperiments" />
++      <option name="ENV_FILES" value="" />
++      <option name="INTERPRETER_OPTIONS" value="" />
++      <option name="PARENT_ENVS" value="true" />
++      <envs>
++        <env name="PYTHONUNBUFFERED" value="1" />
++      </envs>
++      <option name="SDK_HOME" value="" />
++      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
++      <option name="IS_MODULE_SDK" value="true" />
++      <option name="ADD_CONTENT_ROOTS" value="true" />
++      <option name="ADD_SOURCE_ROOTS" value="true" />
++      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/factorial.py" />
++      <option name="PARAMETERS" value="" />
++      <option name="SHOW_COMMAND_LINE" value="false" />
++      <option name="EMULATE_TERMINAL" value="false" />
++      <option name="MODULE_MODE" value="false" />
++      <option name="REDIRECT_INPUT" value="false" />
++      <option name="INPUT_FILE" value="" />
++      <method v="2" />
++    </configuration>
++    <recent_temporary>
++      <list>
++        <item itemvalue="Python.factorial" />
++      </list>
++    </recent_temporary>
++  </component>
++  <component name="SharedIndexes">
++    <attachedChunks>
++      <set>
++        <option value="bundled-python-sdk-0e3be3396995-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23339.19" />
++      </set>
++    </attachedChunks>
++  </component>
++  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
++  <component name="TaskManager">
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="2329b667-a730-4d31-b5fd-87ecddf14c6e" name="Changes" comment="" />
++      <created>1729087795677</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1729087795677</updated>
++    </task>
++    <task id="LOCAL-00001" summary="includes a recursive function to calculate the factorial of a number. added logic to prevent negative inputs.">
++      <option name="closed" value="true" />
++      <created>1729173217456</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1729173217456</updated>
++    </task>
++    <option name="localTasksCounter" value="2" />
++    <servers />
++  </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="includes a recursive function to calculate the factorial of a number. added logic to prevent negative inputs." />
++    <option name="LAST_COMMIT_MESSAGE" value="includes a recursive function to calculate the factorial of a number. added logic to prevent negative inputs." />
++  </component>
++  <component name="XDebuggerManager">
++    <breakpoint-manager>
++      <breakpoints>
++        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
++          <url>file://$PROJECT_DIR$/factorial.py</url>
++          <line>8</line>
++          <option name="timeStamp" value="1" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
++          <url>file://$PROJECT_DIR$/forestFires.py</url>
++          <line>109</line>
++          <option name="timeStamp" value="10" />
++        </line-breakpoint>
++      </breakpoints>
++    </breakpoint-manager>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1729089043909)
++++ b/.idea/misc.xml	(date 1729089043909)
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="Black">
++    <option name="sdkName" value="Python 3.12 (MyExperiments)" />
++  </component>
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.12 (MyExperiments)" project-jdk-type="Python SDK" />
++</project>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1729087804251)
++++ b/.idea/vcs.xml	(date 1729087804251)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
